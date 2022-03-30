@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .kron_eller--mynt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #antall__runder {
+        border-radius: 9999px;
+      }
+
+      .btn__submit {
+        border-radius: 9999px;
+      }
+
+      .bilder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 72px 0;
+      }
+
+      .kron__img {
+        padding: 0 56px;
+      }
+
+      .mynt__img {
+        padding: 0 56px;
+      }
+
+      .btn {
+        background-color: #fff;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .resultat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kron_eller--mynt">
+      <h2>SinglePlayer</h2>
+      <h4>Antall Runder</h4>
+      <form action="">
+        <input type="text" id="antall__runder" name="antRunder" />
+        <input type="submit" value="Submit" class="btn__submit" />
+      </form>
+    </div>
+    <div class="bilder">
+      <button class="btn" onclick="kronmynt()">
+        <img src="/mynt1.png" alt="" class="kron__img" />
+      </button>
+      <button class="btn" onclick="kronmynt()">
+        <img src="/mynt2.png" alt="" class="mynt__img" />
+      </button>
+    </div>
+    <div class="resultat">
+      <h3>Resultat</h3>
+    </div>
+
+    <script>
+      function kronmynt() {
+        var randomKronEllerMynt = Math.floor(Math.random() * 2) + 1;
+        console.log(randomKronEllerMynt);
+
+        var randomKronEllerMyntBilde = "mynt" + randomKronEllerMynt + ".png";
+        console.log(randomKronEllerMyntBilde);
+
+        document
+          .querySelectorAll("img")[0]
+          .setAttribute("src", randomKronEllerMyntBilde);
+      }
+    </script>
+  </body>
+</html>
