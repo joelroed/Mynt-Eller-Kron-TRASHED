@@ -48,24 +48,30 @@
         align-items: center;
         flex-direction: column;
       }
+
+      .btn__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 0 0 0;
+      }
     </style>
   </head>
   <body>
     <div class="kron_eller--mynt">
-      <h2>SinglePlayer</h2>
+      <h2>Kron Eller Mynt</h2>
       <h4>Antall Runder</h4>
       <form action="">
         <input type="text" id="antall__runder" name="antRunder" />
         <input type="submit" value="Submit" class="btn__submit" />
       </form>
     </div>
+    <div class="btn__btn">
+      <button class="btn" onclick="kronmynt()">Kron</button>
+      <button class="btn" onclick="kronmynt()">Mynt</button>
+    </div>
     <div class="bilder">
-      <button class="btn" onclick="kronmynt()">
-        <img src="/mynt1.png" alt="" class="kron__img" />
-      </button>
-      <button class="btn" onclick="kronmynt()">
-        <img src="/mynt2.png" alt="" class="mynt__img" />
-      </button>
+      <img src="/mynt1.png" alt="" class="kron__img" />
     </div>
     <div class="resultat">
       <h3>Resultat</h3>
